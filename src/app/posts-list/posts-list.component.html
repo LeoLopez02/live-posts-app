@@ -1,2 +1,8 @@
-<h1>Latest posts...</h1>
-<app-posts *ngFor="let post of listOfPosts" [post]="post"></app-posts>
+<div class="container">
+  <h1>Latest posts...</h1>
+  <app-posts
+    *ngFor="let post of listOfPosts; let i = index"
+    [post]="post"
+    [index]="i"
+  ></app-posts>
+</div>

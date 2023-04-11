@@ -26,4 +26,24 @@ export class PostService {
       new Date()
     ),
   ];
+
+  //facility get
+  getPosts() {
+    return this.listOfPosts;
+  }
+
+  //facility delete
+  deletePosts(index: number) {
+    this.listOfPosts.splice(index, 1);
+  }
+
+  //facility add
+  addPosts(post: Post) {
+    this.listOfPosts.push(post);
+  }
+
+  //facility update
+  updatePosts(index: number, post: Post) {
+    this.listOfPosts[index] = post;
+  }
 }
