@@ -5,10 +5,11 @@
   </p>
   <img class="img-responsive" src="{{ post?.imagePath }}" alt="image" />
   <p>Auther: {{ post?.author }}</p>
-  <p>Date: {{ post?.detetimeCreated }}</p>
-  <p>Likes: {{ post?.numberOfLikes }}</p>
+  <p>Date: {{ post?.detetimeCreated | date }}</p>
   <button class="btn btn-info" (click)="countLike()">
-    <span class="glyphicon glyphicon-thumbs-up"></span> Like
+    <span class="glyphicon glyphicon-thumbs-up"></span> Like ({{
+      post?.numberOfLikes
+    }})
   </button>
   <br /><br />
   <button class="btn btn-success" (click)="onEdit()">Edit</button> |

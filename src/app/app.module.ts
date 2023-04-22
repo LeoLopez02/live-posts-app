@@ -8,8 +8,9 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { AuthComponent } from './auth/auth.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { PostEditComponent } from './post-edit/post-edit.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -53,6 +54,7 @@ const routes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -24,6 +24,7 @@ export class PostEditComponent implements OnInit {
     let title = '';
     let description = '';
     let imagePath = '';
+    let numberOfLikes = 0;
 
     this.route.params.subscribe((params: Params) => {
       if (params['index']) {
@@ -32,6 +33,7 @@ export class PostEditComponent implements OnInit {
         title = post.title;
         description = post.description;
         imagePath = post.imagePath;
+        numberOfLikes;
         this.isEdit = true;
       }
     });
@@ -47,7 +49,7 @@ export class PostEditComponent implements OnInit {
     const title = this.form.value.title;
     const description = this.form.value.description;
     const imagePath = this.form.value.imagePath;
-    const numberOfLikes = this.form.value.numberOfLikes;
+    const numberOfLikes = (this.form.value.numberOfLikes = 0);
 
     const post: Post = new Post(
       title,
@@ -63,8 +65,14 @@ export class PostEditComponent implements OnInit {
     } else {
       this.postService.addPosts(post);
     }
+    // const updatePosts = this.postService.listOfPostsChanged.subscribe(
+    //   (postArray) => {
+    //     this.listOfPosts = this.postService.getPosts();
+    //   }
+    // );
     console.log(this.form);
 
     this.router.navigate(['/post-list']);
+    this.postService.getPosts();
   }
 }
