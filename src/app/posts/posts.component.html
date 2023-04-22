@@ -6,7 +6,7 @@
   <img class="img-responsive" src="{{ post?.imagePath }}" alt="image" />
   <p>Auther: {{ post?.author }}</p>
   <p>Date: {{ post?.detetimeCreated }}</p>
-  <button>Edit</button> |
-  <button (click)="onDelete()">Delete</button>
+  <button class="btn btn-success" (click)="onEdit()">Edit</button> |
+  <button class="btn btn-danger" (click)="onDelete()">Delete</button>
   <hr />
 </div>

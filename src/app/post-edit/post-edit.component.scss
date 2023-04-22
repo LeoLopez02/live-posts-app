@@ -1,0 +1,18 @@
+// :host {
+//   input,
+//   textarea {
+//     &.ng-invalid.ng-touched {
+//       border: 1px solid red;
+//     }
+//   }
+// }
+.row {
+  form {
+    textarea.ng-touched.ng-invalid {
+      border: 1px solid red;
+    }
+    input.ng-touched.ng-invalid {
+      border: 1px solid red;
+    }
+  }
+}
