@@ -26,4 +26,8 @@ export class PostsComponent implements OnInit {
   onEdit() {
     this.router.navigate(['/post-edit', this.index]);
   }
+
+  countLike() {
+    this.postService.likePost(this.index);
+  }
 }

@@ -47,13 +47,15 @@ export class PostEditComponent implements OnInit {
     const title = this.form.value.title;
     const description = this.form.value.description;
     const imagePath = this.form.value.imagePath;
+    const numberOfLikes = this.form.value.numberOfLikes;
 
     const post: Post = new Post(
       title,
       description,
       imagePath,
       'leotutory@gmail.com',
-      new Date()
+      new Date(),
+      numberOfLikes
     );
 
     if (this.isEdit) {

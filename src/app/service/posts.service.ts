@@ -9,21 +9,24 @@ export class PostService {
       'A description for this post.',
       'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/d96bb958-4e6c-4ce0-9447-fbe226fbbecf/dftmcgu-0ec98510-36aa-4be2-8625-7ed4655b4a30.jpg',
       'Leo Tutory is the author',
-      new Date()
+      new Date(),
+      0
     ),
     new Post(
       'My post',
       'A description for this post.',
       'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/d96bb958-4e6c-4ce0-9447-fbe226fbbecf/dftmcgu-0ec98510-36aa-4be2-8625-7ed4655b4a30.jpg',
       'Leo Tutory is the author',
-      new Date()
+      new Date(),
+      0
     ),
     new Post(
       'My post',
       'A description for this post.',
       'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/d96bb958-4e6c-4ce0-9447-fbe226fbbecf/dftmcgu-0ec98510-36aa-4be2-8625-7ed4655b4a30.jpg',
       'Leo Tutory is the author',
-      new Date()
+      new Date(),
+      0
     ),
   ];
 
@@ -49,5 +52,9 @@ export class PostService {
 
   getPost(index: number) {
     return this.listOfPosts[index];
+  }
+
+  likePost(index: number) {
+    this.listOfPosts[index].numberOfLikes += 1;
   }
 }
